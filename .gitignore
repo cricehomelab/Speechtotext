@@ -1,0 +1,4 @@
+*.mp3
+apikeys.py
+test.py
+__pycache__
