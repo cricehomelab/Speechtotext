@@ -21,6 +21,8 @@ def main():
         else:
             print(answer[1])
             length = get_speech.speaker_2(answer[1])
+        print(length)
+        time.sleep(length + 2)
 
 if __name__ == '__main__':
     main()

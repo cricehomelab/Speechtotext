@@ -6,7 +6,6 @@ import json
 class ArtificialIntelligence:
     def __init__(self):
         self.apikey = apikeys.OPENAI_APIKEY
-        self.url = "https://api.openai.com/v1/models/chatgpt/versions/1/infer"
 
     def post_chatgpt_question(self, question):
         try:
