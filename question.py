@@ -8,6 +8,7 @@ class ArtificialIntelligence:
         self.apikey = apikeys.OPENAI_APIKEY
 
     def post_chatgpt_question(self, question):
+        """Queries the OpenAI API with a question. Returns a response."""
         try:
             openai.api_key = self.apikey
             full_response = openai.Completion.create(
@@ -26,14 +27,15 @@ class ArtificialIntelligence:
             return (False, err)
 
     def get_text(self, full_response):
-        print("trimming down response...")
-        print("converting to Json")
+        """This cuts the response down from its original OpenAI jsonlike object to just the response we would like."""
+        #print("trimming down response...")
+        #print("converting to Json")
         answer_json = json.dumps(full_response)
         answer_json = json.loads(answer_json)
-        print(f"answer_json is a: {type(answer_json)}")
-        print("*********full answer**********")
-        print(answer_json)
-        print("************choices*************")
+        #print(f"answer_json is a: {type(answer_json)}")
+        #print("*********full answer**********")
+        #print(answer_json)
+        #print("************choices*************")
         text = answer_json["choices"][0]["text"]
         return text
 
