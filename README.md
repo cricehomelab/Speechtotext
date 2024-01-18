@@ -1,3 +1,1 @@
-This is a program that interfaces with OpenAI's API.
-This is a personal project and is just something I'm doing for fun.
-Once I have it in a little better state I'll explain how to set this up better.
+Weekend project to see if I could get chatgpt to "talk" and I could talk to it. Basically can ask it questions and googles voice API reads the answer back to me.
